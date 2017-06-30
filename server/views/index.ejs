@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First try</title>
+</head>
+<body>
+	Hello World!
+	<!-- <form action="/signin" method="POST">
+		<input type="text">
+		<input type="password">
+		<input type="submit">
+	</form> -->
+	<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		$.ajax({
+			url: '/signin',
+			type: 'POST',
+			data: {username: 'admin8',password:'854621'},
+		})
+		.done(function() {
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+
+	</script>
+</body>
+</html>
